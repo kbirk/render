@@ -1,0 +1,8 @@
+hash: 20bf4c6b5e2d5427faab7f10f05498b6eec0925620c2461d92b370717dd2df3b
+updated: 2017-03-19T19:39:58.80720344-04:00
+imports:
+- name: github.com/go-gl/gl
+  version: b303bcb3e83b7ef645a5104e1c2db7f8d9e8918a
+  subpackages:
+  - v4.1-core/gl
+testImports: []

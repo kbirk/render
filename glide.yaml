@@ -1,0 +1,5 @@
+package: github.com/kbirk/render
+import:
+- package: github.com/go-gl/gl
+  subpackages:
+  - v4.1-core/gl
