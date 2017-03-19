@@ -1,6 +1,6 @@
 # render
 
-> OpenGL rendering constructs for Go
+> OpenGL convenience structs for Go
 
 [![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](http://godoc.org/github.com/kbirk/render)
 [![Build Status](https://travis-ci.org/kbirk/render.svg?branch=master)](https://travis-ci.org/kbirk/render)
