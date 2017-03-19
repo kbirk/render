@@ -302,7 +302,7 @@ func (s *Shader) queryUniforms() {
 			location := uniformLocations[index]
 
 			s.descriptors[name] = &UniformDescriptor{
-				Name:     name[:len(name)-1],
+				Name:     name,
 				Type:     typ,
 				Count:    count,
 				Location: location,
