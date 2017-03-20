@@ -147,11 +147,15 @@ func (t *Technique) ClearColor(r, g, b, a float32) {
 }
 
 // Draw renders all commands using the technique.
-func (t *Technique) Draw(commands []*Command) {
+func (t *Technique) Draw(commands []*Command) error {
 	t.setup()
 	for _, command := range commands {
-		command.Execute(t.shader)
+		err := command.Execute(t.shader)
+		if err != nil {
+			return err
+		}
 	}
+	return nil
 }
 
 func (t *Technique) setup() {

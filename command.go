@@ -29,17 +29,21 @@ func (c *Command) Renderable(renderable *Renderable) {
 }
 
 // Execute executes the render command.
-func (c *Command) Execute(shader *Shader) {
+func (c *Command) Execute(shader *Shader) error {
 	// bind textures
 	for location, texture := range c.textures {
 		texture.Bind(location)
 	}
 	// set uniforms
 	for name, value := range c.uniforms {
-		shader.SetUniform(name, value)
+		err := shader.SetUniform(name, value)
+		if err != nil {
+			return err
+		}
 	}
 	// draw
 	c.renderable.Bind()
 	c.renderable.Draw()
 	c.renderable.Unbind()
+	return nil
 }
